@@ -5,13 +5,12 @@ import { Fragment, PropsWithChildren, Suspense } from 'react'
 
 import { Lights } from './components/lights/lights'
 
-export const LegoModel = ({ children }: PropsWithChildren) => (
-  <div className="absolute -top-4 left-0 -mt-6  ">
+export const LegoModel = ({ children }: PropsWithChildren) => {
+  return (
     <Canvas
       style={{
         width: 200,
         height: 200,
-        marginTop: -150,
         overflow: 'visible',
       }}
       gl={{ preserveDrawingBuffer: true }}
@@ -24,5 +23,5 @@ export const LegoModel = ({ children }: PropsWithChildren) => (
         {children}
       </Suspense>
     </Canvas>
-  </div>
-)
+  )
+}
